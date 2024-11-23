@@ -1,0 +1,202 @@
+.center
+{
+    text-align: center;
+    color: rgb(131, 131, 241);
+}
+
+.p1
+{
+    text-shadow: -5px 2px 1px RGBa(0,0,160,0.3), 0px 0px 10px RGBa(160,0,0,0.8);
+}
+
+html {
+    font-family: fantasy;
+}
+/* menu deroulant debut */
+nav{
+    width: 100%;
+    margin: 0 auto;
+    background-color: blue;
+    text-align: center;
+    position: sticky;
+    top: 10px;
+}
+nav ul{
+    padding : 0; /* pas de marge intérieure */
+        margin : 0; /* ni extérieure */
+        list-style : none; /* on supprime le style par défaut de la liste */
+        line-height : 21px; /* on définit une hauteur pour chaque élément */
+        text-align : center; /* on centre le texte qui se trouve dans la liste */
+}
+nav ul li{
+    float: left;
+    width: 25%;
+    text-align: center;
+    position: relative;
+}
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+nav a{
+    display: block;
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+nav a:hover{
+    color: blue;
+}
+.sous{
+    display: none;
+    box-shadow: 0px 1px 2px rgb(128, 214, 248);
+    background-color: rgb(128, 214, 248);
+    position: absolute;
+    width: 100%;
+    
+}
+nav > ul li:hover .sous{
+    display: block;
+}
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: center;
+}
+.sous a{
+    padding: 10px;
+    border-bottom: none;
+}
+.sous a:hover{
+    border-bottom: none;
+}
+.menu-deroulant > a::after{
+    content:" ▼";
+    font-size: 10px;
+}
+/* menu deroulant fin */
+
+/* page balise html & css debut */
+.test {
+    width: 100%;
+        margin: auto;
+        background-color: rgb(230, 238, 240);
+        text-align: center;
+        position: sticky;
+        top: 0px;
+    }
+    
+#col {
+        column-count: 3;
+    }
+
+li {
+    color: blue;
+    text-align: left;
+}
+/* page balise html & css fin */
+
+/* page de contact debut */
+form {
+    /* Uniquement centrer le formulaire sur la page */
+    margin: 0 auto;
+    width: 400px;
+    /* Encadré pour voir les limites du formulaire */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+  }
+  
+  form div + div {
+    margin-top: 1em;
+  }
+  
+  label {
+    /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+  }
+  
+  input, textarea {
+    /* Pour s'assurer que tous les champs texte ont la même police.
+       Par défaut, les textarea ont une police monospace */
+    font: 1em sans-serif;
+  
+    /* Pour que tous les champs texte aient la même dimension */
+    width: 300px;
+    box-sizing: border-box;
+  
+    /* Pour harmoniser le look & feel des bordures des champs texte */
+    border: 1px solid #999;
+  }
+  
+input:focus, textarea:focus {
+    /* Pour souligner légèrement les éléments actifs */
+    border-color: #000;
+  }
+  
+textarea {
+    /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
+    vertical-align: top;
+  
+    /* Pour donner assez de place pour écrire du texte */
+    height: 5em;
+  }
+  
+.button {
+    /* Pour placer le bouton à la même position que les champs texte */
+    padding-left: 90px; /* même taille que les étiquettes */
+  }
+  
+button{
+    /* Cette marge supplémentaire représente grosso modo le même espace que celui
+       entre les étiquettes et les champs texte */
+    margin-left: .5em;
+  }
+/* page de contact fin */
+
+/* Nouvelles règles si la fenêtre fait au plus XXXpx de large */
+@media screen and (max-width: 980px)
+{
+    *   
+    {
+color: red;
+
+    }
+}
+@media screen and (max-width: 980px)
+{
+    nav
+    {
+        width: auto;
+        text-align: left;
+        color: red;
+    }
+    
+    nav ul
+    {
+        flex-direction: column;
+        color: red;
+    }
+
+    nav li
+    {
+        padding-left: 4px;
+        color: red;
+    }
+    
+    nav a
+    {
+        font-size: 1.1em;
+        color: red;
+    }
+    
+    nav a:hover
+    {
+        border-bottom: 0;
+        color: red;
+    }
+}
